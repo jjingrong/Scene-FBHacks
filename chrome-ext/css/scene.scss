@@ -3,7 +3,10 @@
   width: 350px;
   font-family: Helvetica, Ubuntu, Arial, sans-serif;
 }
-
+.horizontalLine {
+    margin:25px 2.5px 0px 2.5px;
+    background-color: #f8f8f8;
+}
 .header {
   background-color: #B62029;
   height: 70px;
@@ -54,6 +57,18 @@
         font-size: 24px;
     }
   }
+}
+#itemSummary {
+    padding: 0px 50px;
+    display: flex;
+    justify-content: space-between;
+    h2 {
+        display: flex;
+        align-items: center;
+    }
+    #money {
+        color: darkgreen;
+    }
 }
 .itemThumbnail {
   float: left;

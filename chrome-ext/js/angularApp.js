@@ -1,6 +1,7 @@
 var myApp = angular.module('sceneApp',[]);
 
 myApp.controller('ItemsController', ['$scope', 'GetShowProducts', function($scope, GetShowProducts) {
+	$scope.price = 0
 	$scope.getData = function() {
     setTimeout(function() {
       chrome.storage.local.get("video", function(value) {
@@ -26,6 +27,8 @@ myApp.controller('ItemsController', ['$scope', 'GetShowProducts', function($scop
 					$scope.items[i].selected = 1
 					console.log($scope.items[i])
 				}
+				// Update price total
+				$scope.price = 1234;
 			}
 		}
 	}
