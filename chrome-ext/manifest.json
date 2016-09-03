@@ -5,19 +5,20 @@
   "description": "This extension was created with the awesome extensionizr.com",
   "homepage_url": "http://extensionizr.com",
   "icons": {
-    "16": "icons/icon16.png",
-    "48": "icons/icon48.png",
-    "128": "icons/icon128.png"
+    "16": "icons/sceneLogo.png",
+    "48": "icons/sceneLogo.png",
+    "128": "icons/sceneLogo.png"
   },
   "default_locale": "en",
   "background": {
     "scripts": [
       "js/jquery/jquery.min.js",
-      "src/bg/background.js"
+      "src/bg/background.js",
+      "js/angular/angular.min.js"
     ]
   },
   "browser_action": {
-    "default_icon": "icons/icon19.png",
+    "default_icon": "icons/sceneLogo.png",
     "default_title": "browser action demo",
     "default_popup": "src/browser_action/browser_action.html"
   },
@@ -32,6 +33,9 @@
   ],
   "content_scripts": [
     {
+      "js": [
+        "js/angular/angular.min.js"
+      ],
       "matches": [
         "https://www.google.com/*"
       ],

@@ -1,27 +1,42 @@
 <!doctype html>
-<html>
+<html ng-app="sceneApp" ng-csp>
 <head>
 <title>Scene</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style type="text/css">
 	#mainPopup {
 		padding: 10px;
-		height: 200px;
-		width: 400px;
+		height: 400px;
+		width: 300px;
 		font-family: Helvetica, Ubuntu, Arial, sans-serif;
+	}
+	.itemCell {
+		height:100px;
+		width:100%;
 	}
 	h1 {
 		font-size: 2em;
 	}
 </style>
 <script src="/js/jquery/jquery.min.js"></script>
+<script src="/js/angular/angular.min.js"></script>
 <!-- JavaScript and HTML must be in separate files for security. -->
 <script src="/js/popup.js"></script>
+<script src="/js/angularApp.js"></script>
 </head>
 <body>
-    <div id="mainPopup">
-        <button id="btnCount" onclick="myFunction()">Click me</button>
-        <p id="demo"></p>
+    <div id="mainPopup" ng-controller="GreetingController">
+        <!-- <button id="btnCount" onclick="myFunction()">Click me</button>
+        <p id="demo"></p> -->
+				<div ng-hide="greetings.length" style="text-align: center;">
+					<img src="/icons/sceneLogo.png" style="width:200px;display: block;margin: 50px auto;">
+					<h2>There are no purchasable items on your screen!</h2>
+				</div>
+				<div ng-show="greetings.length">
+					<div class="itemCell" ng-repeat="greeting in greetings">
+						{{greeting}}
+					</div>
+				</div>
     </div>
  </body>
 </html>
