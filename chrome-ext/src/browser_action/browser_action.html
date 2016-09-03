@@ -1,5 +1,5 @@
 <!doctype html>
-<html ng-app="" ng-csp>
+<html ng-app="sceneApp" ng-csp>
 <head>
 <title>Scene</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,15 +17,21 @@
 <script src="/js/jquery/jquery.min.js"></script>
 <script src="/js/angular/angular.min.js"></script>
 <!-- JavaScript and HTML must be in separate files for security. -->
-<!-- <script src="/js/popup.js"></script> -->
+<script src="/js/popup.js"></script>
+<script src="/js/angularApp.js"></script>
 </head>
 <body>
-    <div id="mainPopup">
+    <div id="mainPopup" ng-controller="GreetingController">
         <!-- <button id="btnCount" onclick="myFunction()">Click me</button>
         <p id="demo"></p> -->
-				<input type="text" ng-model="yourName" placeholder="Enter a name here">
-	      <hr>
-	      <h1>Hello {{ yourName }}!</h1>
+				<div ng-hide="greetings.length">
+					There are no purchasable items on your screen!
+				</div>
+				<div ng-show="greetings.length">
+					<input type="text" ng-model="yourName" placeholder="Enter a name here">
+		      <hr>
+					<h1 ng-repeat="greeting in greetings">{{ greeting }} {{ yourName }}!</h1>
+				</div>
     </div>
  </body>
 </html>
