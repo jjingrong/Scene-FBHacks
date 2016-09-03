@@ -1,5 +1,5 @@
 {
-  "name": "CHANGE THIS : Extension boilerplate",
+  "name": "Sceen - Watch it and live it !",
   "version": "0.0.1",
   "manifest_version": 2,
   "description": "This extension was created with the awesome extensionizr.com",
@@ -12,9 +12,9 @@
   "default_locale": "en",
   "background": {
     "scripts": [
+      "js/jquery/jquery.min.js",
       "src/bg/background.js"
-    ],
-    "persistent": true
+    ]
   },
   "browser_action": {
     "default_icon": "icons/icon19.png",
@@ -22,22 +22,13 @@
     "default_popup": "src/browser_action/browser_action.html"
   },
   "permissions": [
-    "bookmarks",
-    "chrome://favicon/",
-    "clipboardRead",
-    "clipboardWrite",
-    "contentSettings",
-    "contextMenus",
-    "cookies",
-    "fileBrowserHandler",
-    "tts",
-    "ttsEngine",
-    "history",
-    "idle",
-    "management",
+    "background",
     "notifications",
+    "contextMenus",
+    "storage",
+    "create",
     "tabs",
-    "geolocation"
+    "<all_urls>"
   ],
   "content_scripts": [
     {
@@ -50,7 +41,7 @@
     },
     {
       "matches": [
-        "https://www.google.com/*"
+        "https://www.youtube.com/*"
       ],
       "js": [
         "src/inject/inject.js"
