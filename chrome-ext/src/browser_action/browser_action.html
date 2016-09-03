@@ -10,6 +10,10 @@
 		width: 300px;
 		font-family: Helvetica, Ubuntu, Arial, sans-serif;
 	}
+	.itemCell {
+		height:100px;
+		width:100%;
+	}
 	h1 {
 		font-size: 2em;
 	}
@@ -24,13 +28,14 @@
     <div id="mainPopup" ng-controller="GreetingController">
         <!-- <button id="btnCount" onclick="myFunction()">Click me</button>
         <p id="demo"></p> -->
-				<div ng-hide="greetings.length">
-					There are no purchasable items on your screen!
+				<div ng-hide="greetings.length" style="text-align: center;">
+					<img src="/icons/sceneLogo.png" style="width:200px;display: block;margin: 50px auto;">
+					<h2>There are no purchasable items on your screen!</h2>
 				</div>
 				<div ng-show="greetings.length">
-					<input type="text" ng-model="yourName" placeholder="Enter a name here">
-		      <hr>
-					<h1 ng-repeat="greeting in greetings">{{ greeting }} {{ yourName }}!</h1>
+					<div class="itemCell" ng-repeat="greeting in greetings">
+						{{greeting}}
+					</div>
 				</div>
     </div>
  </body>
