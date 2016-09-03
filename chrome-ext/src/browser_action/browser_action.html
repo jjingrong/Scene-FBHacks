@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <style type="text/css">
-    
+
     </style>
     <script src="/js/jquery/jquery.min.js"></script>
     <script src="/js/angular/angular.min.js"></script>
@@ -15,6 +15,8 @@
     <script src="/js/popup.js"></script>
     <script src="/js/angularApp.js"></script>
     <script src="/js/payment.js"></script>
+		<script src="/js/stripe/checkout.js"></script>
+		<script src="js/stripe/stripe_v2.js"></script>
 </head>
 <body>
     <div id="mainPopup" ng-controller="ItemsController">
@@ -51,13 +53,13 @@
         <h2>Total: </h2>
         <h2>
             <i id='money' class="material-icons">attach_money</i>
-            <span>{{price.toFixed(2)}}</span>
+            <span id='total-price'>{{price.toFixed(2)}}</span>
         </h2>
 
         <div id="payButton">
         	<button id="customButton">Pay</button>
         </div>
     </div>
-   
+
 </body>
 </html>
