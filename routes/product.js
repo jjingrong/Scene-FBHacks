@@ -5,25 +5,28 @@ var router = express.Router();
 var mongoose = require('mongoose');
 var productModel = require('../models/product')
 
-/* GET home page. */
+/* GET ALL prod. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Product page' });
+  productModel.find(function (err,todos) {
+    if (err) return next(err);
+    res.json(todos);
+  });
 });
 
-/* GET Product. */
+/* GET Product within timeframe */
 router.get('/withinTimeframe', function(req, res, next) {
   // GET data
-  var _location = req.query.showID
-  var _start = req.query.timestamp
+  var _showID = req.query.showID
+  var _timestamp = req.query.timestamp
   
-  var obj = {}
-  obj.l = _location
-  obj.s = _start
-  res.json(obj)
+  var payload = {}
+  payload.l = _location
+  payload.s = _start
+  res.json(payload)
 });
 
 /* Add product */
-router.post('/addProduct', function(req,res,next) {
+router.post('/add', function(req,res,next) {
   productModel.create(req.body, function (err,post) {
     if (err) return next(err);
     res.json(post)

@@ -3,9 +3,10 @@ var mongoose = require('mongoose');
 var ProductSchema = new mongoose.Schema({
   // Data from video
   show: Number, // For demo purposes: 1 is star wars, 2 is silicon valley
-  show_timestamp: Number, 
+  show_timestamp: Number,
   
   // Data about product
+  id: Number,
   name: String,
   price: String,
   url: String,
