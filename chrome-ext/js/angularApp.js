@@ -1,11 +1,8 @@
 var myApp = angular.module('sceneApp',[]);
 
 myApp.controller('ItemsController', ['$scope', 'GetShowProducts', function($scope, GetShowProducts) {
-<<<<<<< HEAD
     chrome.tabs.executeScript(null, {file: "inject.js"});
-=======
-	$scope.price = 0
->>>>>>> 11c1cf90557d5e9ab939951ffc5ce327fd8ad4d2
+	$scope.price = 0;
 	$scope.getData = function() {
     setTimeout(function() {
       chrome.storage.local.get("video", function(value) {
