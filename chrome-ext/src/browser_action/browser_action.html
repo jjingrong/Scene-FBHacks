@@ -32,11 +32,12 @@
 					</div>
 				</div>
 				<div id='itemList' ng-show="items.length">
-					<div class="itemCell animated fadeInUp" ng-repeat="item in items">
+					<div class="itemCell animated fadeInUp" ng-repeat="item in items" ng-click="itemCellPressed(item.id);">
 						<img ng-src="{{item.thumbnail}}" alt="" class="itemThumbnail"/>
 						<div class="itemTitle">{{item.name}}</div>
 						<div class="itemPrice">{{item.price}}</div>
 						<div class="itemActionButton"></div>
+            <div ng-show="item.selected">selected</div>
 					</div>
 				</div>
     </div>
