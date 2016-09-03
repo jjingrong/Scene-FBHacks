@@ -1,5 +1,5 @@
 var myApp = angular.module('sceneApp',[]);
 
-myApp.controller('GreetingController', ['$scope', function($scope) {
-  $scope.greetings = [];
+myApp.controller('ItemsController', ['$scope', function($scope) {
+  $scope.items = ['Lightsaber', 'Kylo Ren mask'];
 }]);

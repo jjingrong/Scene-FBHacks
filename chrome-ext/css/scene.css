@@ -1,0 +1,36 @@
+#mainPopup {
+  height: 400px;
+  width: 350px;
+  font-family: Helvetica, Ubuntu, Arial, sans-serif;
+}
+.itemCell {
+  height:100px;
+  width:100%;
+  background-color: red;
+  margin-bottom: 10px;
+}
+.itemThumbnail {
+  float: left;
+  height: 100px;
+  width: 100px;
+  margin-right: 10px;
+  object-fit: cover;
+}
+.itemTitle {
+  font-size: 16px;
+  padding-top: 30px;
+  padding-bottom: 5px;
+}
+.itemPrice {
+  font-size: 12px;
+}
+.itemActionButton {
+  float: right;
+}
+h1 {
+  font-size: 2em;
+}
+h3 {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}

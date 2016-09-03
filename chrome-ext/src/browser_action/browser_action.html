@@ -3,20 +3,9 @@
 <head>
 <title>Scene</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="/css/scene.css">
 <style type="text/css">
-	#mainPopup {
-		padding: 10px;
-		height: 400px;
-		width: 300px;
-		font-family: Helvetica, Ubuntu, Arial, sans-serif;
-	}
-	.itemCell {
-		height:100px;
-		width:100%;
-	}
-	h1 {
-		font-size: 2em;
-	}
+
 </style>
 <script src="/js/jquery/jquery.min.js"></script>
 <script src="/js/angular/angular.min.js"></script>
@@ -25,16 +14,19 @@
 <script src="/js/angularApp.js"></script>
 </head>
 <body>
-    <div id="mainPopup" ng-controller="GreetingController">
+    <div id="mainPopup" ng-controller="ItemsController">
         <!-- <button id="btnCount" onclick="myFunction()">Click me</button>
         <p id="demo"></p> -->
-				<div ng-hide="greetings.length" style="text-align: center;">
+				<div ng-hide="items.length" style="text-align: center;">
 					<img src="/icons/sceneLogo.png" style="width:200px;display: block;margin: 50px auto;">
 					<h2>There are no purchasable items on your screen!</h2>
 				</div>
-				<div ng-show="greetings.length">
-					<div class="itemCell" ng-repeat="greeting in greetings">
-						{{greeting}}
+				<div ng-show="items.length">
+					<div class="itemCell" ng-repeat="item in items">
+						<img src="/icons/potato.jpg" alt="" class="itemThumbnail"/>
+						<div class="itemTitle">{{item}}</div>
+						<div class="itemPrice">Price</div>
+						<div class="itemActionButton">Buy Now</div>
 					</div>
 				</div>
     </div>
