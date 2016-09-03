@@ -9,6 +9,15 @@ var routes = require('./routes/index');
 
 var app = express();
 
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://'+process.env.mongoUser+':'+process.env.mongoPW+'@ds019876.mlab.com:19876/fb-hack', function(err) {
+    if(err) {
+        console.log('connection error', err);
+    } else {
+        console.log('connection successful');
+    }
+});
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
