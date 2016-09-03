@@ -4,6 +4,7 @@
 <title>Scene</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" type="text/css" href="/css/scene.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 <style type="text/css">
 
 </style>
@@ -29,7 +30,7 @@
 				</div>
 				<div ng-show="items.length">
 					<div class="header"><img src="/icons/sceneLogoFullAlt.png" class="headerImage"></div>
-					<div class="itemCell" ng-repeat="item in items">
+					<div class="itemCell animated fadeInUp" ng-repeat="item in items">
 						<img ng-src="{{item.thumbnail}}" alt="" class="itemThumbnail"/>
 						<div class="itemTitle">{{item.name}}</div>
 						<div class="itemPrice">{{item.price}}</div>

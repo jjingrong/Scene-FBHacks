@@ -1,0 +1,62 @@
+#mainPopup {
+  height: 400px;
+  width: 350px;
+  font-family: Helvetica, Ubuntu, Arial, sans-serif;
+}
+
+.header {
+  background-color: #B62029;
+  height: 70px;
+  margin-bottom: 10px;
+}
+.headerImage {
+  height:45px;
+  display: block;
+  margin: 0px auto;
+  padding-top: 13px;
+  /*padding-left: 5px;*/
+}
+.itemCell {
+  height:100px;
+  margin-bottom: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+  border-radius: 2px;
+  box-shadow: 2px 2px 5px #888888;
+  @for $i from 1 through 10 {
+    &:nth-child(#{$i}) {
+      webkit-vendor-animation-delay : ($i) * 0.25s !important;
+      animation-delay : ($i - 1) * 0.25s  !important;
+    }
+  }
+}
+.itemThumbnail {
+  float: left;
+  height: 100px;
+  width: 100px;
+  margin-right: 10px;
+  object-fit: cover;
+  border-right: 1px solid #d3d3d3;
+}
+.itemTitle {
+  font-size: 16px;
+  padding-top: 30px;
+  padding-bottom: 5px;
+}
+.itemPrice {
+  font-size: 12px;
+}
+.itemActionButton {
+  float: right;
+}
+h1 {
+  font-size: 2em;
+}
+h3 {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+body {
+  padding: 0px;
+  margin: 0px;
+}
