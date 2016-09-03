@@ -12,6 +12,6 @@
 // 	}, 10);
 // });
 
-chrome.extension.sendMessage({text: document.getElementById('eow-title').innerHTML}, function(response) {
+chrome.extension.sendMessage({title: document.getElementById('eow-title').innerHTML}, function(response) {
     console.log("Response: ", response);
 });

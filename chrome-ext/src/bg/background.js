@@ -7,9 +7,11 @@
 // 	obj[username] = 'my test var';
 // 	chrome.storage.local.set(obj);
 // }
-function onMessage(msg, sender, sendResponse) {
-    console.log("Received %o from %o, frame", msg, sender.tab, sender.frameId);
-    sendResponse(msg);
+function onMessage(data, sender, sendResponse) {
+    console.log("Received %o from %o, frame", data, sender.tab, sender.frameId);
+    var videoTitle = msg['title'];
+    
+    sendResponse(data['title']);
 }
 
 //example of using a message handler from the inject scripts
