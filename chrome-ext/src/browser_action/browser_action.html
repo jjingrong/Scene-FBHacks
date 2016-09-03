@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="/css/scene.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <style type="text/css">
     
     </style>
@@ -39,7 +40,9 @@
                     <div class="itemTitle">{{item.name}}</div>
                     <div class="itemPrice">{{item.price}}</div>
                 </div>
-                <div class='itemActive' ng-show="item.selected">selected</div>
+                <div class='itemActive' ng-show="item.selected">
+                    <i id='check_circle' class="material-icons animated rotateInDownLeft slideIn">check_circle</i>
+                </div>
             </div>
         </div>
     </div>

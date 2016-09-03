@@ -56,15 +56,17 @@
   .itemCell:nth-child(10) {
     webkit-vendor-animation-delay: 2.25s !important;
     animation-delay: 2.25s !important; }
-  .itemCell:hover {
-    box-shadow: none; }
   .itemCell .itemDetails {
     display: flex;
     justify-content: space-between;
     height: 100%; }
   .itemCell .itemActive {
     display: flex;
-    align-items: center; }
+    align-items: center;
+    padding-right: 10px; }
+    .itemCell .itemActive #check_circle {
+      color: rgba(182, 32, 41, 0.85);
+      font-size: 24px; }
 
 .itemThumbnail {
   float: left;
