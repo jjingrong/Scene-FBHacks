@@ -30,11 +30,15 @@
   margin-right: 5px;
   border-radius: 2px;
   box-shadow: 2px 2px 5px #888888;
+  transition: box-shadow 0.2s ease-in, border 0.2s ease-in;
   @for $i from 2 through 10 {
     &:nth-child(#{$i}) {
       webkit-vendor-animation-delay : ($i - 1) * 0.25s !important;
       animation-delay : ($i - 1) * 0.25s  !important;
     }
+  }
+  &:hover {
+    box-shadow: none;
   }
 }
 .itemThumbnail {

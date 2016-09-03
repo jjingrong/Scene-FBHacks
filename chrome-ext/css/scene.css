@@ -27,7 +27,8 @@
   margin-left: 5px;
   margin-right: 5px;
   border-radius: 2px;
-  box-shadow: 2px 2px 5px #888888; }
+  box-shadow: 2px 2px 5px #888888;
+  transition: box-shadow 0.2s ease-in, border 0.2s ease-in; }
   .itemCell:nth-child(2) {
     webkit-vendor-animation-delay: 0.25s !important;
     animation-delay: 0.25s !important; }
@@ -55,6 +56,8 @@
   .itemCell:nth-child(10) {
     webkit-vendor-animation-delay: 2.25s !important;
     animation-delay: 2.25s !important; }
+  .itemCell:hover {
+    box-shadow: none; }
 
 .itemThumbnail {
   float: left;
