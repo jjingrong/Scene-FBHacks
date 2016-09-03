@@ -31,7 +31,7 @@
 					  <div class="double-bounce2"></div>
 					</div>
 				</div>
-				<div ng-show="items.length">
+				<div id='itemList' ng-show="items.length">
 					<div class="itemCell animated fadeInUp" ng-repeat="item in items">
 						<img ng-src="{{item.thumbnail}}" alt="" class="itemThumbnail"/>
 						<div class="itemTitle">{{item.name}}</div>
