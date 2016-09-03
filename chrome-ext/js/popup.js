@@ -1,5 +1,7 @@
 function count() {
-    $("#demo").html("Hello World");
+	chrome.storage.local.get("video", function(value) {
+		$("#demo").html(value.video);
+	})
 }
 function init() {
 	$('#btnCount').click(count);

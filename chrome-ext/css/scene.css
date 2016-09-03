@@ -3,11 +3,19 @@
   width: 350px;
   font-family: Helvetica, Ubuntu, Arial, sans-serif;
 }
+
+.header {
+  background-color: #B62029;
+  height: 70px;
+  margin-bottom: 10px;
+}
 .itemCell {
   height:100px;
-  width:100%;
-  background-color: red;
   margin-bottom: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+  border-radius: 2px;
+  box-shadow: 2px 2px 5px #888888;
 }
 .itemThumbnail {
   float: left;
@@ -33,4 +41,8 @@ h1 {
 h3 {
   padding-top: 0px;
   padding-bottom: 0px;
+}
+body {
+  padding: 0px;
+  margin: 0px;
 }
