@@ -1,44 +1,58 @@
 <!doctype html>
 <html ng-app="sceneApp" ng-csp>
 <head>
-<title>Scene</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" type="text/css" href="/css/scene.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-<style type="text/css">
-
-</style>
-<script src="/js/jquery/jquery.min.js"></script>
-<script src="/js/angular/angular.min.js"></script>
-<!-- JavaScript and HTML must be in separate files for security. -->
-<script src="/js/popup.js"></script>
-<script src="/js/angularApp.js"></script>
-<script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+    <title>Scene</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/css/scene.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <style type="text/css">
+    
+    </style>
+    <script src="/js/jquery/jquery.min.js"></script>
+    <script src="/js/angular/angular.min.js"></script>
+    <!-- JavaScript and HTML must be in separate files for security. -->
+    <script src="/js/popup.js"></script>
+    <script src="/js/angularApp.js"></script>
+    <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
 </head>
 <body>
     <div id="mainPopup" ng-controller="ItemsController">
         <!-- <button id="btnCount" onclick="myFunction()">Click me</button>
         <p id="demo"></p> -->
-				<div class="header"><img src="/icons/sceneLogoFullAlt.png" class="headerImage"></div>
-				<div ng-hide="items.length" style="text-align: center;">
-					<!-- <img src="/icons/sceneLogo.png" style="width:200px;display: block;margin: 50px auto;"> -->
-					<!-- <h2>There are no purchasable items on your screen!</h2> -->
-					<!-- <button ng-click="getData()">
-					  Get Product
-					</button> -->
-					<div class="spinner" data-ng-init="getData()">
-					  <div class="double-bounce1"></div>
-					  <div class="double-bounce2"></div>
-					</div>
-				</div>
-				<div ng-show="items.length">
-					<div class="itemCell animated fadeInUp" ng-repeat="item in items">
-						<img ng-src="{{item.thumbnail}}" alt="" class="itemThumbnail"/>
-						<div class="itemTitle">{{item.name}}</div>
-						<div class="itemPrice">{{item.price}}</div>
-						<div class="itemActionButton"></div>
-					</div>
-				</div>
+        <div class="header"><img src="/icons/sceneLogoFullAlt.png" class="headerImage"></div>
+        <div ng-hide="items.length" style="text-align: center;">
+            <!-- <img src="/icons/sceneLogo.png" style="width:200px;display: block;margin: 50px auto;"> -->
+            <!-- <h2>There are no purchasable items on your screen!</h2> -->
+            <!-- <button ng-click="getData()">
+            Get Product
+        </button> -->
+        <div class="spinner" data-ng-init="getData()">
+            <div class="double-bounce1"></div>
+            <div class="double-bounce2"></div>
+        </div>
     </div>
- </body>
+    <div id='itemList' ng-show="items.length">
+        <div class="itemCell animated fadeInUp" ng-repeat="item in items" ng-click="itemCellPressed(item.id);">
+            <img ng-src="{{item.thumbnail}}" alt="" class="itemThumbnail"/>
+            <div class='itemDetails'>
+                <div>
+                    <div class="itemTitle">{{item.name}}</div>
+                    <div class="itemPrice">{{item.price}}</div>
+                </div>
+                <div class='itemActive' ng-show="item.selected">
+                    <i id='check_circle' class="material-icons animated rotateInDownLeft slideIn">check_circle</i>
+                </div>
+            </div>
+        </div>
+        <hr class='horizontalLine'/>
+        <div id='itemSummary'>
+            <h2>Total: </h2>
+            <h2>
+                <i id='money' class="material-icons">attach_money</i>
+                <span>{{price.toFixed(2)}}</span>
+            </h2>
+        </div>
+    </div>
+</body>
 </html>

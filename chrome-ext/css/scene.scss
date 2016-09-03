@@ -3,11 +3,17 @@
   width: 350px;
   font-family: Helvetica, Ubuntu, Arial, sans-serif;
 }
-
+.horizontalLine {
+    margin:25px 2.5px 0px 2.5px;
+    background-color: #f8f8f8;
+}
 .header {
   background-color: #B62029;
   height: 70px;
-  margin-bottom: 10px;
+  position: fixed;
+  width: 100%;
+  z-index: 10000000;
+  top: 0;
 }
 .headerImage {
   height:45px;
@@ -17,6 +23,9 @@
   /*padding-left: 5px;*/
   padding-left: 42px;
 }
+#itemList {
+  margin-top: 77.5px;
+}
 .itemCell {
   height:100px;
   margin-bottom: 10px;
@@ -24,12 +33,42 @@
   margin-right: 5px;
   border-radius: 2px;
   box-shadow: 2px 2px 5px #888888;
+  transition: box-shadow 0.2s ease-in, border 0.2s ease-in;
   @for $i from 2 through 10 {
     &:nth-child(#{$i}) {
       webkit-vendor-animation-delay : ($i - 1) * 0.25s !important;
       animation-delay : ($i - 1) * 0.25s  !important;
     }
   }
+  &:hover {
+    // box-shadow: none;
+  }
+  .itemDetails {
+    display: flex;
+    justify-content: space-between;
+    height: 100%
+  }
+  .itemActive { 
+    display: flex;
+    align-items: center;
+    padding-right: 10px;
+    #check_circle {
+        color: rgba(182,32,41, 0.85);
+        font-size: 24px;
+    }
+  }
+}
+#itemSummary {
+    padding: 0px 50px;
+    display: flex;
+    justify-content: space-between;
+    h2 {
+        display: flex;
+        align-items: center;
+    }
+    #money {
+        color: darkgreen;
+    }
 }
 .itemThumbnail {
   float: left;
@@ -63,11 +102,12 @@ body {
 }
 /* Spinner animation things */
 .spinner {
-  width: 40px;
-  height: 40px;
+  width: 45px;
+  height: 45px;
 
   position: relative;
-  margin: 100px auto;
+  margin: 0px auto;
+  top: 200px;
 }
 
 .double-bounce1, .double-bounce2 {
