@@ -3,20 +3,53 @@
 <head>
 	<title>Payment</title>
 	<script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<style>
+		#customButton {
+			background-color: #b30000; /* Red */
+		    border: none;
+		    color: white;
+		    padding: 10px 24px;
+		    border-radius: 12px;
+		    text-align: center;
+		    text-decoration: none;
+		    display: inline-block;
+		    font-size: 16px;
+		}
+	</style>
 </head>
 <body>
 	<div id="mainPopup" ng-controller="GreetingController">
-		<form action="/charge" method="POST">
-		  <script
-		    src="https://checkout.stripe.com/checkout.js"
-		    class="stripe-button"
-		    data-key="pk_test_6pRNASCoBOKtIshFeQd4XMUh"
-		    data-image="/square-image.png"
-		    data-name="Demo Site"
-		    data-description="2 widgets ($20.00)"
-		    data-amount="2000">
-		  </script>
-		</form>
+		<script src="https://checkout.stripe.com/checkout.js"></script>
+
+		<button id="customButton">Purchase</button>
+
+		<script>
+		var handler = StripeCheckout.configure({
+		  key: 'pk_test_mkxhcUOMYR5aVoyu1KYsO0e2',
+		  image: '../../icons/sceneLogo.png',
+		  locale: 'auto',
+		  token: function(token) {
+		    // You can access the token ID with `token.id`.
+		    // Get the token ID to your server-side code for use.
+		  }
+		});
+
+		$('#customButton').on('click', function(e) {
+		  // Open Checkout with further options:
+		  handler.open({
+		    name: 'Scene App',
+		    description: 'Payment Portal',
+		    amount: 2000
+		  });
+		  e.preventDefault();
+		});
+
+		// Close Checkout on page navigation:
+		$(window).on('popstate', function() {
+		  handler.close();
+		});
+		</script>
 	</div>
 </body>
 </html>

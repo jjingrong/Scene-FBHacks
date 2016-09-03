@@ -81,7 +81,23 @@
     display: flex;
     align-items: center; }
   #itemSummary #money {
-    color: darkgreen; }
+    color: darkgreen; 
+    margin-left: -40%; }
+  #itemSummary #payButton {
+    margin-top: 3%;
+    margin-left: -20%; }
+
+#customButton {
+  background-color: #b30000;
+  border: none;
+  color: white;
+  padding: 8px 20px;
+  border-radius: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+}
 
 .itemThumbnail {
   float: left;

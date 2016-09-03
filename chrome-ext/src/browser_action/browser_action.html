@@ -14,7 +14,7 @@
     <!-- JavaScript and HTML must be in separate files for security. -->
     <script src="/js/popup.js"></script>
     <script src="/js/angularApp.js"></script>
-    <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+    <script src="/js/payment.js"></script>
 </head>
 <body>
     <div id="mainPopup" ng-controller="ItemsController">
@@ -46,12 +46,18 @@
             </div>
         </div>
     </div>
+
     <div id='itemSummary' ng-show="items.length">
         <h2>Total: </h2>
         <h2>
             <i id='money' class="material-icons">attach_money</i>
             <span>{{price.toFixed(2)}}</span>
         </h2>
+
+        <div id="payButton">
+        	<button id="customButton">Pay</button>
+        </div>
     </div>
+   
 </body>
 </html>
