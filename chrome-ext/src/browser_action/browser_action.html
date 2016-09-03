@@ -31,6 +31,11 @@
 				<div ng-hide="greetings.length" style="text-align: center;">
 					<img src="/icons/sceneLogo.png" style="width:200px;display: block;margin: 50px auto;">
 					<h2>There are no purchasable items on your screen!</h2>
+					<!-- <button id="btnCount">click</button>
+					<p id="demo"></p> -->
+					<button ng-click="getData()">
+					  Get Product
+					</button>
 				</div>
 				<div ng-show="greetings.length">
 					<div class="itemCell" ng-repeat="greeting in greetings">
