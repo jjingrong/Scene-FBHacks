@@ -16,7 +16,7 @@ myApp.controller('ItemsController', ['$scope', 'GetShowProducts', function($scop
 
     }, 1500);
     }
-	// @param: id of item pressed 
+	// @param: id of item pressed
 	$scope.itemCellPressed = function(_id) {
 		for (var i = 0; i < $scope.items.length; i++) {
 			// Object found
@@ -65,5 +65,9 @@ function getPriceTotal(arr) {
 // @param: Unformatted String which contains price
 // @return: Numeric value of money
 function getNumericValueFromString(str) {
-	return 1
+  var myRegexp = /\d+(\.\d+)?/
+  var match = myRegexp.exec(str);
+  console.log(match[0]);
+  return parseFloat(match[0]);
+	// return 1
 }
