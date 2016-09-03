@@ -1,13 +1,16 @@
-// if you checked "fancy-settings" in extensionizr.com, uncomment this lines
+// function onMessage(request, sender, sendResponse) {
+// 	console.log(request);
 
-// var settings = new Store("settings", {
-//     "sample_setting": "This is how you use Store.js to remember values"
-// });
-
+// 	chrome.pageAction.show(sender.tab.id);
+// 	sendResponse();
+// 	var obj = {};
+// 	obj[username] = 'my test var';
+// 	chrome.storage.local.set(obj);
+// }
+function onMessage(msg, sender, sendResponse) {
+    console.log("Received %o from %o, frame", msg, sender.tab, sender.frameId);
+    sendResponse(msg);
+}
 
 //example of using a message handler from the inject scripts
-chrome.extension.onMessage.addListener(
-  function(request, sender, sendResponse) {
-  	chrome.pageAction.show(sender.tab.id);
-    sendResponse();
-  });
+chrome.extension.onMessage.addListener(onMessage);

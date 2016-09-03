@@ -1,5 +1,6 @@
 function count() {
-    $("#demo").html("Hello World");
+	var username = chrome.storage.local.get("username");
+    $("#demo").html(username);
 }
 function init() {
 	$('#btnCount').click(count);
