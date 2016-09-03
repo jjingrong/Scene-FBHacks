@@ -24,9 +24,9 @@
   margin-right: 5px;
   border-radius: 2px;
   box-shadow: 2px 2px 5px #888888;
-  @for $i from 1 through 10 {
+  @for $i from 2 through 10 {
     &:nth-child(#{$i}) {
-      webkit-vendor-animation-delay : ($i) * 0.25s !important;
+      webkit-vendor-animation-delay : ($i - 1) * 0.25s !important;
       animation-delay : ($i - 1) * 0.25s  !important;
     }
   }

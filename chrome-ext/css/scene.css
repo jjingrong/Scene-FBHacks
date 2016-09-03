@@ -22,35 +22,32 @@
   margin-right: 5px;
   border-radius: 2px;
   box-shadow: 2px 2px 5px #888888; }
-  .itemCell:nth-child(1) {
-    webkit-vendor-animation-delay: 0.25s !important;
-    animation-delay: 0s !important; }
   .itemCell:nth-child(2) {
-    webkit-vendor-animation-delay: 0.5s !important;
+    webkit-vendor-animation-delay: 0.25s !important;
     animation-delay: 0.25s !important; }
   .itemCell:nth-child(3) {
-    webkit-vendor-animation-delay: 0.75s !important;
+    webkit-vendor-animation-delay: 0.5s !important;
     animation-delay: 0.5s !important; }
   .itemCell:nth-child(4) {
-    webkit-vendor-animation-delay: 1s !important;
+    webkit-vendor-animation-delay: 0.75s !important;
     animation-delay: 0.75s !important; }
   .itemCell:nth-child(5) {
-    webkit-vendor-animation-delay: 1.25s !important;
+    webkit-vendor-animation-delay: 1s !important;
     animation-delay: 1s !important; }
   .itemCell:nth-child(6) {
-    webkit-vendor-animation-delay: 1.5s !important;
+    webkit-vendor-animation-delay: 1.25s !important;
     animation-delay: 1.25s !important; }
   .itemCell:nth-child(7) {
-    webkit-vendor-animation-delay: 1.75s !important;
+    webkit-vendor-animation-delay: 1.5s !important;
     animation-delay: 1.5s !important; }
   .itemCell:nth-child(8) {
-    webkit-vendor-animation-delay: 2s !important;
+    webkit-vendor-animation-delay: 1.75s !important;
     animation-delay: 1.75s !important; }
   .itemCell:nth-child(9) {
-    webkit-vendor-animation-delay: 2.25s !important;
+    webkit-vendor-animation-delay: 2s !important;
     animation-delay: 2s !important; }
   .itemCell:nth-child(10) {
-    webkit-vendor-animation-delay: 2.5s !important;
+    webkit-vendor-animation-delay: 2.25s !important;
     animation-delay: 2.25s !important; }
 
 .itemThumbnail {
