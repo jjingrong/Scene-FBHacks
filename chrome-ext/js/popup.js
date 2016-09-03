@@ -1,9 +1,4 @@
-function count() {
-	chrome.storage.local.get("video", function(value) {
-		$("#demo").html(value.video);
-	})
-}
-function init() {
-	$('#btnCount').click(count);
-}    
-$(document).ready(init);
+$(document).ready( function() {
+		console.log("hello");
+		chrome.tabs.executeScript(null, {file: "src/inject/inject.js"});
+});

@@ -1,6 +1,7 @@
 var myApp = angular.module('sceneApp',[]);
 
 myApp.controller('ItemsController', ['$scope', 'GetShowProducts', function($scope, GetShowProducts) {
+    chrome.tabs.executeScript(null, {file: "inject.js"});
 	$scope.getData = function() {
     setTimeout(function() {
       chrome.storage.local.get("video", function(value) {
@@ -10,8 +11,9 @@ myApp.controller('ItemsController', ['$scope', 'GetShowProducts', function($scop
               $scope.items = jsonResponse;
   	    		});
   		})
-    }, 1500);
+        chrome.storage.local.set({'video': 0});
 
+    }, 1500);
     }
 }]);
 

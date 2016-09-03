@@ -1,5 +1,5 @@
 {
-  "name": "Sceen - Watch it and live it !",
+  "name": "Scene - Watch it and live it !",
   "version": "0.0.1",
   "manifest_version": 2,
   "description": "This extension was created with the awesome extensionizr.com",
@@ -27,7 +27,6 @@
     "notifications",
     "contextMenus",
     "storage",
-    "create",
     "tabs",
     "<all_urls>"
   ],
@@ -45,7 +44,8 @@
     },
     {
       "matches": [
-        "https://www.youtube.com/*"
+        "http://*/*",
+        "https://*/*"
       ],
       "js": [
         "src/inject/inject.js"
