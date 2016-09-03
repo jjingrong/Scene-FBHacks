@@ -9,6 +9,13 @@
   height: 70px;
   margin-bottom: 10px;
 }
+.headerImage {
+  height:45px;
+  display: block;
+  margin: 0px auto;
+  padding-top: 13px;
+  /*padding-left: 5px;*/
+}
 .itemCell {
   height:100px;
   margin-bottom: 10px;
@@ -23,6 +30,7 @@
   width: 100px;
   margin-right: 10px;
   object-fit: cover;
+  border-right: 1px solid #d3d3d3;
 }
 .itemTitle {
   font-size: 16px;
