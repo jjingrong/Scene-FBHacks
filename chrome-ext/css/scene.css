@@ -58,6 +58,13 @@
     animation-delay: 2.25s !important; }
   .itemCell:hover {
     box-shadow: none; }
+  .itemCell .itemDetails {
+    display: flex;
+    justify-content: space-between;
+    height: 100%; }
+  .itemCell .itemActive {
+    display: flex;
+    align-items: center; }
 
 .itemThumbnail {
   float: left;

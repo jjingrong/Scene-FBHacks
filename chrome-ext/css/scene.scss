@@ -40,6 +40,15 @@
   &:hover {
     box-shadow: none;
   }
+  .itemDetails {
+    display: flex;
+    justify-content: space-between;
+    height: 100%
+  }
+  .itemActive { 
+    display: flex;
+    align-items: center;
+  }
 }
 .itemThumbnail {
   float: left;
