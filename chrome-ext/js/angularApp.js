@@ -22,13 +22,11 @@ myApp.controller('ItemsController', ['$scope', 'GetShowProducts', function($scop
 				// Toggle selected
 				if ($scope.items[i].selected) {
 					$scope.items[i].selected = 0
-					console.log($scope.items[i])
 				} else {
 					$scope.items[i].selected = 1
-					console.log($scope.items[i])
 				}
 				// Update price total
-				$scope.price = 1234;
+				$scope.price = getPriceTotal($scope.items);
 			}
 		}
 	}
@@ -45,3 +43,25 @@ myApp.service('GetShowProducts', ['$http', function($http){
         }
     }
 }])
+
+// @param: Array of items
+// @return: Monetary value of all items
+function getPriceTotal(arr) {
+	var totalPrice = 0.00
+	for (var i = 0; i < arr.length; i++) {
+		console.log(arr[i].selected)
+		if (arr[i].selected) {
+			console.log('selected!')
+			console.log('totalPrice: ' + totalPrice)
+			var numericValue = getNumericValueFromString(arr[i].price)
+			totalPrice += numericValue
+		}
+	}
+	return totalPrice
+}
+
+// @param: Unformatted String which contains price
+// @return: Numeric value of money
+function getNumericValueFromString(str) {
+	return 1
+}
