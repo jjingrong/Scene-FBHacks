@@ -52,14 +52,20 @@
     </div>
 
     <div id='itemSummary' ng-show="items.length">
-        <h2>Total: </h2>
-        <h2>
-            <i id='money' class="material-icons">attach_money</i>
-            <span id='total-price'>{{price.toFixed(2)}}</span>
-        </h2>
+        <div id='itemPriceLine'>
+            <span></span>
+            <h2>Total: </h2>
+            <h2>
+                <i id='money' class="material-icons">attach_money</i>
+                <span id='total-price'>{{price.toFixed(2)}}</span>
+            </h2>
+        </div>
 
         <div id="payButton">
-        	<button id="customButton">Pay</button>
+        	<button id="customButton">
+                <i id='shopping_cart' class="material-icons">shopping_cart</i>
+                <span>Checkout</span>
+            </button>
         </div>
     </div>
 

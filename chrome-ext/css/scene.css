@@ -73,31 +73,36 @@
   width: 100%;
   background-color: white;
   position: fixed;
-  bottom: 0px;
-  padding: 0px 40px;
-  display: flex;
-  justify-content: space-around; }
+  bottom: 0px; }
+  #itemSummary #itemPriceLine {
+    display: flex;
+    justify-content: space-between; }
   #itemSummary h2 {
     display: flex;
     align-items: center; }
   #itemSummary #money {
-    color: darkgreen; 
+    color: darkgreen;
     margin-left: -40%; }
+  #itemSummary #shopping_cart {
+    color: white;
+    margin-right: 7.5px; }
   #itemSummary #payButton {
-    margin-top: 3%;
-    margin-left: -20%; }
-
-#customButton {
-  background-color: #b30000;
-  border: none;
-  color: white;
-  padding: 8px 20px;
-  border-radius: 10px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 14px;
-}
+    width: 100%; }
+    #itemSummary #payButton #customButton {
+      width: 100%;
+      display: flex !important;
+      align-items: center;
+      justify-content: center;
+      background-color: #b30000;
+      border: none;
+      color: white;
+      padding: 8px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 14px; }
+    #itemSummary #payButton span {
+      text-align: center; }
 
 .itemThumbnail {
   float: left;

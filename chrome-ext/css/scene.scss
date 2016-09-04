@@ -60,9 +60,11 @@
     background-color: white;
     position: fixed;
     bottom: 0px;
-    padding: 0px 40px;
-    display: flex;
-    justify-content: space-around;
+    #itemPriceLine {
+        // padding: 0px 40px;
+        display: flex;
+        justify-content: space-between;
+    }
     h2 {
         display: flex;
         align-items: center;
@@ -71,21 +73,30 @@
         color: darkgreen;
         margin-left: -40%;
     }
-    #payButton{
-        margin-top: 3%;
-        margin-left: -20%;
+    #shopping_cart {
+        color: white;
+        margin-right: 7.5px
     }
-}
-#customButton {
-  background-color: #b30000;
-  border: none;
-  color: white;
-  padding: 8px 20px;
-  border-radius: 10px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 14px;
+    #payButton{
+        width: 100%;
+        #customButton {
+            width: 100%;
+            display: flex !important;
+            align-items: center;
+            justify-content: center;
+            background-color: #b30000;
+            border: none;
+            color: white;
+            padding: 8px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+        }
+        span {
+            text-align: center;
+        }
+    }
 }
 .itemThumbnail {
   float: left;
