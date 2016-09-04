@@ -4,7 +4,7 @@
 
 ## API Call
 
-#### */product/getForShow*
+#### *scene-fb-hacks.herokuapp.com/product/getForShow*
 *Get products related to a show ID*
 
 @params
@@ -26,7 +26,7 @@ thumbnail: String,
 updated_at: Date
 ```
 
-#### */product/*
+#### *scene-fb-hacks.herokuapp.com/product/*
 *Get all products*
 @return 
 
