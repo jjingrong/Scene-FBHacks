@@ -8,6 +8,11 @@ $(document).ready(function() {
       token: function(token) {
         // You can access the token ID with `token.id`.
         // Get the token ID to your server-side code for use.
+        },
+      closed: function() {
+          $('#itemList').hide()
+          $('#itemSummary').hide()
+          $('#afterCheckoutPage').show()
       }
     });
     // Open Checkout with further options:
